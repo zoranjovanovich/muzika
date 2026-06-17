@@ -263,6 +263,7 @@ site-nav, site-footer { display: contents; }
     font-size: var(--step--1);
     border-width: 1px;
   }
+  header[aria-label="Hero"] h1 { margin-top: -10px; }
 }
 @media (max-width: 860px) {
   .site-nav {
