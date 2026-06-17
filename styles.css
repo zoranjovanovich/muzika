@@ -311,11 +311,21 @@ p  { max-width: 62ch; }
 #funds .wrap.funds-content p,
 #funds .wrap.funds-content .card {
   width: min(100%, 720px);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 #funds .wrap.funds-content span.eyebrow,
 #funds .wrap.funds-content h2,
 #funds .wrap.funds-content p {
+  display: block;
   text-align: right;
+}
+#funds .wrap.funds-content span.eyebrow {
+  width: 100%;
+}
+#funds .wrap.funds-content h2 {
+  width: 100%;
+  margin-inline: 0;
 }
 #funds .wrap.funds-content .card {
   margin: 0;
