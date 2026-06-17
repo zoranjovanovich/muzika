@@ -300,6 +300,18 @@ p  { max-width: 62ch; }
 @media (min-width: 960px) {
   .page-grid { grid-template-columns: minmax(320px, 1fr) 1fr; align-items: start; }
 }
+#funds .wrap.funds-content {
+  text-align: right;
+}
+#funds .wrap.funds-content p,
+#funds .wrap.funds-content h2,
+#funds .wrap.funds-content .eyebrow {
+  text-align: right;
+}
+#funds .wrap.funds-content .card {
+  margin-left: auto;
+  margin-right: 0;
+}
 /* ---------- POTPISNI ELEMENT: TERMOMETAR DONACIJA ---------- */
 .thermo { max-width: 520px; }
 .thermo__row {
