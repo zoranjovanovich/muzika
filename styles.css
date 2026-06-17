@@ -310,7 +310,7 @@ p  { max-width: 62ch; }
 #funds .wrap.funds-content h2,
 #funds .wrap.funds-content p,
 #funds .wrap.funds-content .card {
-  width: min(100%, 720px);
+  width: clamp(200px, 50vw, 590px);
   max-width: 100%;
   box-sizing: border-box;
 }
