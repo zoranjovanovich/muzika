@@ -319,7 +319,7 @@ p  { max-width: 62ch; }
   justify-content: flex-end;
   width: auto;
   margin-left: auto;
-  color: var(--genre);
+  color: var(--paper-ink);
 }
 #funds .wrap.funds-content span.eyebrow::before {
   display: inline-block;
