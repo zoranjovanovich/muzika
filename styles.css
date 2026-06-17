@@ -451,7 +451,7 @@ site-nav { display: contents; }
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1200 / 469;
 }
 .show-card__media img {
   width: 100%;
@@ -460,8 +460,9 @@ site-nav { display: contents; }
   display: block;
 }
 @media (min-width: 720px) {
-  .show-card { grid-template-columns: minmax(220px, 320px) 1fr; align-items: center; }
-  .show-card__media { aspect-ratio: 4 / 3; }
+  .show-card { grid-template-columns: 1fr minmax(220px, 320px); align-items: center; }
+  .show-card__media { order: 2; }
+  .show-card__body { order: 1; }
 }
 
 #help .card .muted {
