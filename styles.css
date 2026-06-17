@@ -459,8 +459,8 @@ site-nav { display: contents; }
   object-fit: cover;
   display: block;
 }
-@media (min-width: 720px) {
-  .show-card { grid-template-columns: 1fr minmax(220px, 320px); align-items: center; }
+@media (min-width: 860px) {
+  .show-card { grid-template-columns: 1fr minmax(320px, 480px); align-items: center; }
   .show-card__media { order: 2; }
   .show-card__body { order: 1; }
 }
