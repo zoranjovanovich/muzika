@@ -382,8 +382,8 @@ site-nav { display: contents; }
 }
 
 @media (max-width: 719px) {
-  header h1 + p { margin-top: 0.75rem; }
-  header p + .pulse { margin-top: 1rem; }
+  header h1 + p { margin-top: calc(0.75rem + 20px); }
+  header p + .pulse { margin-top: calc(1rem + 20px); }
 }
 
 /* ---------- POTPISNI MOTIV: PULS (bubnjar) ---------- */
