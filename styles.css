@@ -318,7 +318,6 @@ site-nav, site-footer { display: contents; }
   .page-grid { grid-template-columns: minmax(320px, 1fr) 1fr; align-items: start; }
 }
 
-.page-section { margin-top: var(--section-y); }
 .placeholder-box {
   background: var(--surface-2);
   color: var(--on-ink);
@@ -330,6 +329,11 @@ site-nav, site-footer { display: contents; }
   justify-content: center;
   text-align: center;
   padding: 1.5rem;
+}
+.ledger .placeholder-box {
+  background: #fff;
+  color: var(--paper-ink);
+  border: 1px dashed var(--line-ink);
 }
 .photo-grid {
   display: grid;
