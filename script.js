@@ -7,7 +7,6 @@ class SiteNav extends HTMLElement {
         <ul id="site-menu" class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="/">Početna</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="/o-projektu.html">O projektu</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/akcije/">Akcije</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="/svirke/">Svirke</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzičari</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="/partneri.html">Partneri</a></li>

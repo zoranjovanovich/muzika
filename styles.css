@@ -317,6 +317,28 @@ site-nav { display: contents; }
 @media (min-width: 960px) {
   .page-grid { grid-template-columns: minmax(320px, 1fr) 1fr; align-items: start; }
 }
+
+.page-section { margin-top: var(--section-y); }
+.placeholder-box {
+  background: var(--surface-2);
+  color: var(--on-ink);
+  font-family: var(--font-mono);
+  border-radius: var(--radius);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .photo-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (min-width: 720px) {
   #funds .wrap.funds-content {
     display: flex;
