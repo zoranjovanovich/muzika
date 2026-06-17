@@ -465,6 +465,25 @@ site-nav { display: contents; }
   .show-card__body { order: 1; }
 }
 
+/* ---------- Kompaktan red za naredne svirke (mala slika, nenaglašeno) ---------- */
+.next-show { display: flex; flex-direction: column; gap: 0.75rem; }
+.next-show__thumb {
+  margin: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 1200 / 801;
+  width: 6rem;
+}
+.next-show__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.next-show__body { display: grid; gap: 0.3rem; min-width: 0; }
+.next-show__row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+@media (min-width: 480px) {
+  .next-show { flex-direction: row; align-items: center; }
+  .next-show__thumb { width: auto; height: 5rem; }
+  .next-show__body { flex: 1; align-content: center; }
+}
+
 #help .card .muted {
   color: var(--on-ink);
   font-size: var(--step-1);
