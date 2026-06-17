@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO: ime serijala | humanitarne svirke Šabac</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-genre="hardrock">
+  <div class="wrap">
+    <nav class="site-nav" aria-label="Glavni meni">
+      <a class="site-nav__brand" href="/">O.U.R. LIVE</a>
+      <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-menu" type="button">☰</button>
+      <ul id="site-menu" class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="/">Početna</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/o-projektu.html">O projektu</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/akcije/">Akcije</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/svirke/">Svirke</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzicari</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/partneri.html">Partneri</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/transparentnost.html">Transparentnost</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/vesti/">Vesti</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header class="section stage" aria-label="Hero" style="position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; overflow:hidden;">
+      <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; display:block;">
+        <source src="hero.mp4" type="video/mp4">
+        Tvoj brauzer ne podržava video.
+      </video>
+      <div style="position:absolute; inset:0; background:rgba(22,19,15,0.35);"></div>
+    </div>
+    <div class="wrap" style="position:relative; z-index:1;">
+      <span class="eyebrow">ZAJEDNIČKIM SNAGAMA</span>
+      <h1>O.U.R. LIVE</h1>
+      <p>Serijal humanitarnih svirki u Šapcu pokreće donacije za outdoor muzički park i instrumente za decu i zajednicu.</p>
+      <div class="pulse" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="thermo" role="region" aria-label="procenat prikupljenih donacija">
+        <div class="thermo__row">
+          <div class="thermo__now"><span class="data">24%</span> prikupljeno</div>
+          <div class="thermo__goal">TODO: 6.000 e</div>
+        </div>
+        <div class="thermo__bar" aria-hidden="true">
+          <div class="thermo__fill" style="--progress:24%;"></div>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem;">
+        <a class="btn btn--donate" href="#donate">Doniraj</a>
+        <button class="btn btn--ghost" id="scrollNext" type="button">Sledeća svirka</button>
+      </div>
+      
+    </div>
+  </header>
+
+  <section id="hero-video-block" class="section stage" aria-label="Hero video block" style="background:var(--ink); color:var(--on-ink);">
+    <div class="wrap">
+      <div style="max-width:var(--maxw); margin-inline:auto;">
+        <div style="background:transparent; border-radius:6px; overflow:hidden;">
+          <!-- mesto za video: ubaci fajl i <source> u <video> ili promeni src -->
+          <div style="width:100%; height:clamp(20.52rem, 37.8vw, 43.2rem);">
+            <video id="hero-block-video" playsinline controls style="width:100%; height:100%; object-fit:cover; display:block; background:#000;">
+              <source src="band.mp4" type="video/mp4">
+              Tvoj brauzer ne podržava video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="project" class="section ledger" aria-labelledby="project-title">
+      <div class="wrap">
+        <span class="eyebrow">o projektu</span>
+        <h2 id="project-title">Muzika koja<br>menja grad</h2>
+        <div style="height:1rem" aria-hidden="true"></div>
+        <div class="project-grid">
+          <div>
+            <p>Pokrećemo serijal humanitarnih svirki u kojima se oko iste ideje okupljaju različiti muzičari, žanrovi, klubovi i publika. Svaka nova postava donosi drugačiji zvuk, ali cilj ostaje isti: da kroz muziku podržimo konkretne stvari koje ostaju zajednici.</p>
+            <div style="height:1rem" aria-hidden="true"></div>
+            <p>Prva ideja je stvaranje javnog muzičkog prostora u Šapcu — mesta sa instrumentima na otvorenom, dostupnog deci, mladima i svima koji žele da se susretnu sa muzikom van sale, škole ili kluba.</p>
+            <div style="height:1rem" aria-hidden="true"></div>
+            <p>Ne pravimo serijal samo zbog nastupa. Pravímo ga zbog ljudi koji će taj prostor koristiti, zbog klinaca koji će prvi put udariti ritam, zbog onih koji će zastati, probati, odsvirati nešto svoje. Žanrovi će se menjati, muzičari će dolaziti iz različitih priča, ali razlog ostaje isti: da zajedničkim zvukom napravimo nešto što traje.</p>
+          </div>
+          <figure style="margin:0; display:flex; align-items:center; justify-content:center;">
+            <img src="ksilofon.png" alt="ksilofon instrument" style="width:auto; max-height:clamp(24rem,80vh,72rem); border-radius:6px; box-shadow: 0 6px 18px rgba(0,0,0,0.25);" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="funds" class="section ledger" aria-labelledby="funds-title" style="padding-block-start: calc(var(--section-y) * 0.5);">
+      <div class="wrap">
+        <span class="eyebrow">Kako se upravlja prikupljenim sredstvima</span>
+        <h2 id="funds-title">Jasno i direktno</h2>
+        <p>Donacije idu na izgradnju outdoor muzičkog parka. Svaka transakcija je dokumentovana, a račun i izveštaj su otvoreni za proveru.</p>
+        <div class="card" style="margin-top:1.5rem;">
+          <p class="muted">organizacija koja prima sredstva</p>
+          <p><strong>TODO: naziv organizacije</strong></p>
+          <p class="muted">namenski račun</p>
+          <p><strong>TODO: broj računa</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows" class="section stage" aria-labelledby="shows-title">
+      <div class="wrap">
+        <span class="eyebrow">svirke</span>
+        <h2 id="shows-title">Sledeći nastup</h2>
+        <article class="card" aria-labelledby="next-show-title">
+          <p class="muted">istaknuta svirka</p>
+          <h3 id="next-show-title">TODO: datum sledeće svirke</h3>
+          <p>Žanr: hard rock. Lokacija: TODO: mesto svirke. Uz dobar ritam, prikupljamo sredstva za beton i instrumente.</p>
+          <p class="data">TODO: gosti / posebni izvođači</p>
+        </article>
+        <div style="margin-top:1.5rem; display:grid; gap:1rem;">
+          <article class="card">
+            <p class="muted">naredna</p>
+            <p><strong>TODO: datum</strong> — pop / bend</p>
+          </article>
+          <article class="card">
+            <p class="muted">naredna</p>
+            <p><strong>TODO: datum</strong> — akustika / gost</p>
+          </article>
+          <article class="card">
+            <p class="muted">arhiva</p>
+            <p>Prve svirke su obezbedile instrumente i probni prostor. Više detalja stiže uskoro.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="help" class="section stage" aria-labelledby="help-title">
+      <div class="wrap">
+        <span class="eyebrow">kako da pomogneš</span>
+        <h2 id="help-title">Kako možeš da pomogneš</h2>
+        <ul style="list-style:none; padding:0; display:grid; gap:1rem;">
+          <li class="card">
+            <p class="muted">dođi na svirku</p>
+            <p>Dođi na svirku, ponesi prijatelje i podrži energiju u živo. Prihod od ulaznica i donacija ide u fond.</p>
+          </li>
+          <li class="card">
+            <p class="muted">doniraj</p>
+            <p>Ubrzaj izgradnju parka i kupovinu instrumenata. Svaka donacija ide direktno na javni račun.</p>
+          </li>
+          <li class="card">
+            <p class="muted">podeli objavu</p>
+            <p>Objavi priču ili video na mrežama sa #TODO. Najveća snaga je u zajednici koja širi informaciju.</p>
+          </li>
+          <li class="card">
+            <p class="muted">podrži kao firma</p>
+            <p>Partnerstva i sponzorstva omogućavaju veći domet i bolju opremu za park.</p>
+          </li>
+          <li class="card">
+            <p class="muted">pomozi oko organizacije</p>
+            <p>Volontiraj za logistiku, promociju i događaje. Svaka ruka znači da smo bliži cilju.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="partners" class="section ledger" aria-labelledby="partners-title">
+      <div class="wrap">
+        <span class="eyebrow">sponzori</span>
+        <h2 id="partners-title">Partneri koji stoje uz nas</h2>
+        <p>Podrška je važna. Sponzori pomažu opremu, promociju i mogućnost da serijal ostane otvoren za zajednicu.</p>
+        <div style="display:grid; gap:1rem; margin-top:1.5rem;">
+          <div class="card">
+            <p class="muted">TODO: sponzor / partner</p>
+          </div>
+          <div class="card">
+            <p class="muted">TODO: sponzor / partner</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:1.5rem;">
+          <p class="muted">posvoji instrument</p>
+          <p>Postani donator instrumenta. Svaki „posvojeni“ bubanj ili gitara ostaje u parku i nosi ime zajednice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section stage" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <span class="eyebrow">galerija</span>
+        <h2 id="gallery-title">Videli smo i ono što tek dolazi</h2>
+        <p>Brzi video zapisi i snimci sa proba pokazuju energiju i razlog zbog kojeg serijal postoji.</p>
+        <div style="display:grid; gap:1rem; margin-top:1.5rem;">
+          <figure class="card">
+            <div aria-hidden="true" style="background:#221C16; padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:#F3EEE5; font-family:var(--font-mono);">TODO: video / foto</span></div>
+            <figcaption class="muted">Kraktki vertikalni snimak iz probe</figcaption>
+          </figure>
+          <figure class="card">
+            <div aria-hidden="true" style="background:#221C16; padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:#F3EEE5; font-family:var(--font-mono);">TODO: video / foto</span></div>
+            <figcaption class="muted">Gostujući bend pred nastup</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="press" class="section ledger" aria-labelledby="press-title">
+      <div class="wrap">
+        <span class="eyebrow">mediji</span>
+        <h2 id="press-title">Informacije za novinare</h2>
+        <p>Press kit je spreman za korišćenje: kratki tekstovi, fotografije i lista partnera.</p>
+        <ul style="list-style:none; padding:0; display:grid; gap:1rem; margin-top:1.5rem;">
+          <li class="card"><a href="#" aria-label="Press kit">TODO: link ka press kitu</a></li>
+          <li class="card"><a href="#" aria-label="Kontakt za medije">TODO: kontakt za medije</a></li>
+          <li class="card"><a href="#" aria-label="Linkovi ka prilozima">TODO: linkovi ka prilozima</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section stage" aria-labelledby="footer-title">
+    <div class="wrap">
+      <span class="eyebrow">kontakt</span>
+      <h2 id="footer-title">Ostani povezan</h2>
+      <p>Donacije su transparentne. Račun je otvoren za proveru, a svaki izveštaj će biti objavljen online.</p>
+      <p class="muted">TODO: društvene mreže • TODO: broj računa • TODO: link ka izveštajima</p>
+    </div>
+  </footer>
+
+  <div class="donate-bar" aria-label="Brza traka za donaciju">
+    <div>
+      <p class="muted" style="margin:0;">Podrži park u Šapcu</p>
+      <p style="margin:0;">Doniraj sada i ubrzaj sledeću svirku.</p>
+    </div>
+    <a class="btn btn--donate" href="#donate">Doniraj</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
