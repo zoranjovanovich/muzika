@@ -97,6 +97,16 @@ h3 { font-size: var(--step-2); }
   max-width: 15ch;
   line-height: 1.1;
 }
+.card h3 strong {
+  display: block;
+  font-size: var(--step-2);
+}
+.card h3 .show-date {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
 p  { max-width: 62ch; }
 
 /* Oznaka / eyebrow — mono, prati žanr-boju */
