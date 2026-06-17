@@ -95,13 +95,20 @@
         <div class="card" style="margin-top:1.5rem;">
           <p class="muted">organizacija koja prima sredstva</p>
           <p><strong>TODO: naziv organizacije</strong></p>
-          <p class="muted">namenski račun</p>
+          <p class="muted" style="margin-top:1rem;">namenski račun</p>
           <p><strong>TODO: broj računa</strong></p>
-          <p class="muted">cilj prikupljanja</p>
-          <p><strong>6.000 €</strong></p>
-          <p class="muted">status</p>
-          <p><strong>24% prikupljeno</strong></p>
         </div>
+
+        <div class="thermo" role="region" aria-label="procenat prikupljenih donacija" style="margin-top:1.5rem;">
+          <div class="thermo__row">
+            <div class="thermo__now"><span class="data">24%</span> prikupljeno</div>
+            <div class="thermo__goal">Cilj: 6.000 €</div>
+          </div>
+          <div class="thermo__bar" aria-hidden="true">
+            <div class="thermo__fill" style="--progress:24%;"></div>
+          </div>
+        </div>
+
         <p class="muted" style="margin-top:1.5rem; font-size:var(--step--1);">Napomena: dok se ne otvori namenski račun / potvrdi organizacija, donacije se primaju samo kroz dogovorene i javno evidentirane kanale.</p>
         <a class="btn btn--ghost" href="/transparentnost.html" style="margin-top:1.5rem;">Pogledaj kako se koriste sredstva</a>
       </div>

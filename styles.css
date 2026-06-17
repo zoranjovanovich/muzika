@@ -374,7 +374,8 @@ site-nav, site-footer { display: contents; }
   #funds .wrap.funds-content span.eyebrow,
   #funds .wrap.funds-content h2,
   #funds .wrap.funds-content p,
-  #funds .wrap.funds-content .card {
+  #funds .wrap.funds-content .card,
+  #funds .wrap.funds-content .thermo {
     width: clamp(200px, 50vw, 590px);
     max-width: 100%;
     box-sizing: border-box;
