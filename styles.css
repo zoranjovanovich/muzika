@@ -187,7 +187,7 @@ p  { max-width: 62ch; }
 }
 .ledger .btn--ghost { color: var(--paper-ink); border-color: var(--line-ink); }
 .btn--ghost:hover { border-color: var(--genre); color: var(--genre); }
-site-nav { display: contents; }
+site-nav, site-footer { display: contents; }
 
 .site-nav {
   display: flex;
@@ -428,11 +428,11 @@ site-nav { display: contents; }
 
 /* ---------- LEPLJIVA "DONIRAJ" TRAKA (mobilni) ---------- */
 .donate-bar {
+  display: none;
   position: fixed;
   inset-inline: 0;
   bottom: 0;
   z-index: 50;
-  display: flex;
   gap: 0.75rem;
   align-items: center;
   justify-content: space-between;
@@ -443,9 +443,12 @@ site-nav { display: contents; }
   background: color-mix(in srgb, var(--ink) 92%, transparent);
   backdrop-filter: blur(8px);
   border-top: 1px solid var(--line);
-  max-width: 100vw;
 }
 .donate-bar .btn { padding-block: 0.6em; }
+@media (max-width: 719px) {
+  .donate-bar { display: flex; }
+  body:has(.donate-bar) { padding-bottom: 108px; }
+}
 
 /* ---------- KARTICA (svirka / instrument / sponzor) ---------- */
 .card {
@@ -539,6 +542,45 @@ site-nav { display: contents; }
 .help-card p:not(.help-card__title) { color: rgba(243, 238, 229, 0.88); }
 .help-card--placeholder { border-style: solid dashed dashed dashed; }
 .help-card--placeholder .help-card__title { color: var(--muted); }
+
+/* ---------- FOOTER ---------- */
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 720px) {
+  .footer-grid { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+}
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+.footer-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--on-ink);
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.footer-social__link svg { width: 1.25rem; height: 1.25rem; }
+.footer-social__link:hover {
+  border-color: var(--genre);
+  color: var(--genre);
+  transform: translateY(-2px);
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+@media (min-width: 720px) {
+  .footer-links { text-align: right; }
+}
 
 /* ---------- PRISTUPAČNOST ---------- */
 :focus-visible {
