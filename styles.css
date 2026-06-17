@@ -187,6 +187,8 @@ p  { max-width: 62ch; }
 }
 .ledger .btn--ghost { color: var(--paper-ink); border-color: var(--line-ink); }
 .btn--ghost:hover { border-color: var(--genre); color: var(--genre); }
+site-nav { display: contents; }
+
 .site-nav {
   display: flex;
   flex-wrap: wrap;
