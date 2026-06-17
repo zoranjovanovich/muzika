@@ -317,14 +317,6 @@ site-nav { display: contents; }
 @media (min-width: 960px) {
   .page-grid { grid-template-columns: minmax(320px, 1fr) 1fr; align-items: start; }
 }
-#funds .wrap.funds-content span.eyebrow::before {
-  display: inline-block;
-  width: 1.6em;
-  height: 2px;
-  background: var(--genre);
-  margin-inline-end: 0.8rem;
-  content: "";
-}
 @media (min-width: 720px) {
   #funds .wrap.funds-content {
     display: flex;
@@ -341,23 +333,14 @@ site-nav { display: contents; }
     box-sizing: border-box;
   }
   #funds .wrap.funds-content span.eyebrow {
-    display: inline-flex;
+    width: 100%;
     justify-content: flex-end;
-    width: auto;
-    margin-left: auto;
     color: var(--paper-ink);
   }
-  #funds .wrap.funds-content span.eyebrow,
   #funds .wrap.funds-content h2,
   #funds .wrap.funds-content p {
     display: block;
     text-align: right;
-  }
-  #funds .wrap.funds-content span.eyebrow {
-    width: 100%;
-  }
-  #funds .wrap.funds-content h2 {
-    width: 100%;
     margin-inline: 0;
   }
   #funds .wrap.funds-content .card {
