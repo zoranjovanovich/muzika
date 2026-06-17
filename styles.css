@@ -314,6 +314,21 @@ p  { max-width: 62ch; }
   max-width: 100%;
   box-sizing: border-box;
 }
+#funds .wrap.funds-content span.eyebrow {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: auto;
+  margin-left: auto;
+  color: var(--genre);
+}
+#funds .wrap.funds-content span.eyebrow::before {
+  display: inline-block;
+  width: 1.6em;
+  height: 2px;
+  background: var(--genre);
+  margin-inline-end: 0.8rem;
+  content: "";
+}
 #funds .wrap.funds-content span.eyebrow,
 #funds .wrap.funds-content h2,
 #funds .wrap.funds-content p {
