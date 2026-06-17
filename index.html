@@ -4,19 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TODO: ime serijala | humanitarne svirke Šabac</title>
+  <meta name="description" content="O.U.R. LIVE je serijal humanitarnih svirki u Šapcu. Donacije idu za izgradnju outdoor muzičkog parka i instrumente za zajednicu.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:title" content="TODO: ime serijala | humanitarne svirke Šabac">
+  <meta property="og:description" content="O.U.R. LIVE je serijal humanitarnih svirki u Šapcu. Donacije idu za izgradnju outdoor muzičkog parka i instrumente za zajednicu.">
+  <!-- TODO: zameniti apsolutnim URL-om (sa domenom) kad sajt ode na produkciju -->
+  <meta property="og:image" content="/dangube-band-web.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-genre="hardrock">
   <div class="wrap">
     <nav class="site-nav" aria-label="Glavni meni">
       <a class="site-nav__brand" href="/">O.U.R. LIVE</a>
-      <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-menu" type="button">☰</button>
+      <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Meni" type="button">☰</button>
       <ul id="site-menu" class="site-nav__list">
         <li class="site-nav__item"><a class="site-nav__link" href="/">Početna</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/o-projektu.html">O projektu</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/akcije/">Akcije</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/svirke/">Svirke</a></li>
-        <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzicari</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzičari</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/partneri.html">Partneri</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/transparentnost.html">Transparentnost</a></li>
         <li class="site-nav__item"><a class="site-nav__link" href="/vesti/">Vesti</a></li>
@@ -30,7 +37,7 @@
         <source src="hero.mp4" type="video/mp4">
         Tvoj brauzer ne podržava video.
       </video>
-      <div style="position:absolute; inset:0; background:rgba(22,19,15,0.35);"></div>
+      <div style="position:absolute; inset:0; background:color-mix(in srgb, var(--ink) 35%, transparent);"></div>
     </div>
     <div class="wrap" style="position:relative; z-index:1;">
       <span class="eyebrow">ZAJEDNIČKIM SNAGAMA</span>
@@ -49,7 +56,7 @@
         </div>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem;">
-        <a class="btn btn--donate" href="#donate">Doniraj</a>
+        <a class="btn btn--donate" href="#funds">Doniraj</a>
         <button class="btn btn--ghost" id="scrollNext" type="button">Sledeća svirka</button>
       </div>
       
@@ -84,7 +91,7 @@
             <div style="height:1rem" aria-hidden="true"></div>
             <p>Prva ideja je stvaranje javnog muzičkog prostora u Šapcu — mesta sa instrumentima na otvorenom, dostupnog deci, mladima i svima koji žele da se susretnu sa muzikom van sale, škole ili kluba.</p>
             <div style="height:1rem" aria-hidden="true"></div>
-            <p>Ne pravimo serijal samo zbog nastupa. Pravímo ga zbog ljudi koji će taj prostor koristiti, zbog klinaca koji će prvi put udariti ritam, zbog onih koji će zastati, probati, odsvirati nešto svoje. Žanrovi će se menjati, muzičari će dolaziti iz različitih priča, ali razlog ostaje isti: da zajedničkim zvukom napravimo nešto što traje.</p>
+            <p>Ne pravimo serijal samo zbog nastupa. Pravimo ga zbog ljudi koji će taj prostor koristiti, zbog klinaca koji će prvi put udariti ritam, zbog onih koji će zastati, probati, odsvirati nešto svoje. Žanrovi će se menjati, muzičari će dolaziti iz različitih priča, ali razlog ostaje isti: da zajedničkim zvukom napravimo nešto što traje.</p>
           </div>
           <figure style="margin:0; display:flex; align-items:center; justify-content:center;">
             <img src="ksilofon.png" alt="ksilofon instrument" style="width:auto; max-height:clamp(24rem,80vh,72rem); border-radius:6px; box-shadow: 0 6px 18px rgba(0,0,0,0.25);" />
@@ -110,10 +117,10 @@
     <section id="shows" class="section stage" aria-labelledby="shows-title">
       <div class="wrap">
         <span class="eyebrow">svirke</span>
-        <h2 id="shows-title">Sledeći nastup</h2>
+        <h2 id="shows-title" tabindex="-1">Sledeći nastup</h2>
         <article class="card show-card" aria-labelledby="next-show-title">
           <figure class="show-card__media">
-            <img src="dangube-band-web.jpg" alt="Bend Dangube" loading="lazy" />
+            <img src="dangube-band-web.jpg" alt="Bend Dangube" width="1200" height="801" loading="lazy" />
           </figure>
           <div class="show-card__body">
             <p class="muted">sledeći događaj</p>
@@ -195,11 +202,11 @@
         <p>Brzi video zapisi i snimci sa proba pokazuju energiju i razlog zbog kojeg serijal postoji.</p>
         <div style="display:grid; gap:1rem; margin-top:1.5rem;">
           <figure class="card">
-            <div aria-hidden="true" style="background:#221C16; padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:#F3EEE5; font-family:var(--font-mono);">TODO: video / foto</span></div>
+            <div aria-hidden="true" style="background:var(--surface-2); padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:var(--on-ink); font-family:var(--font-mono);">TODO: video / foto</span></div>
             <figcaption class="muted">Kraktki vertikalni snimak iz probe</figcaption>
           </figure>
           <figure class="card">
-            <div aria-hidden="true" style="background:#221C16; padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:#F3EEE5; font-family:var(--font-mono);">TODO: video / foto</span></div>
+            <div aria-hidden="true" style="background:var(--surface-2); padding:2rem; border-radius:4px; min-height:180px; display:flex; align-items:center; justify-content:center;"><span style="color:var(--on-ink); font-family:var(--font-mono);">TODO: video / foto</span></div>
             <figcaption class="muted">Gostujući bend pred nastup</figcaption>
           </figure>
         </div>
@@ -234,7 +241,7 @@
       <p class="muted" style="margin:0;">Podrži park u Šapcu</p>
       <p style="margin:0;">Doniraj sada i ubrzaj sledeću svirku.</p>
     </div>
-    <a class="btn btn--donate" href="#donate">Doniraj</a>
+    <a class="btn btn--donate" href="#funds">Doniraj</a>
   </div>
 
   <script src="script.js"></script>
