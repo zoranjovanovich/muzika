@@ -92,6 +92,11 @@ h1, h2, h3 {
 h1 { font-size: var(--step-hero); }
 h2 { font-size: var(--step-3); }
 h3 { font-size: var(--step-2); }
+.card h3 {
+  font-size: var(--step-1);
+  max-width: 25ch;
+  line-height: 1.1;
+}
 p  { max-width: 62ch; }
 
 /* Oznaka / eyebrow — mono, prati žanr-boju */
