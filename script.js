@@ -1,20 +1,25 @@
 class SiteNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <nav class="site-nav" aria-label="Glavni meni">
-        <a class="site-nav__brand" href="/">O.U.R. LIVE</a>
-        <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Meni" type="button">☰</button>
-        <ul id="site-menu" class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="/">Početna</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/o-projektu.html">O projektu</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/svirke/">Svirke</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzičari</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/partneri.html">Partneri</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/transparentnost.html">Transparentnost</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/vesti/">Vesti</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="/kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+      <div class="site-nav-bar">
+        <div class="wrap">
+          <nav class="site-nav" aria-label="Glavni meni">
+            <a class="site-nav__brand" href="/">O.U.R. LIVE</a>
+            <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Meni" type="button">☰</button>
+            <ul id="site-menu" class="site-nav__list">
+              <li class="site-nav__item"><a class="site-nav__link" href="/">Početna</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/o-projektu.html">O projektu</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/svirke/">Svirke</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/muzicari.html">Muzičari</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/partneri.html">Partneri</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/transparentnost.html">Transparentnost</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/vesti/">Vesti</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="/kontakt.html">Kontakt</a></li>
+              <li class="site-nav__item site-nav__item--donate"><a class="btn btn--donate site-nav__donate" href="/#funds">Doniraj</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     `;
   }
 }
