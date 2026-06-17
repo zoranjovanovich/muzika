@@ -451,7 +451,7 @@ site-nav { display: contents; }
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 1200 / 469;
+  aspect-ratio: 16 / 9;
 }
 .show-card__media img {
   width: 100%;
