@@ -485,14 +485,48 @@ site-nav { display: contents; }
   .next-show__body { flex: 1; align-content: center; }
 }
 
-#help .card .muted {
-  color: var(--on-ink);
-  font-size: var(--step-1);
+/* ---------- KARTICE: KAKO DA POMOGNEŠ ---------- */
+.help-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+@media (min-width: 640px) {
+  .help-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .help-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.help-card {
+  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.help-card:hover { transform: translateY(-4px); border-color: var(--genre); }
+.help-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--genre) 16%, transparent);
+  color: var(--genre);
+  margin-bottom: 1rem;
+}
+.help-card__icon svg { width: 1.5rem; height: 1.5rem; }
+.help-card__title {
+  font-family: var(--font-display);
   font-weight: 700;
+  font-size: var(--step-1);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
 }
-#help .card > p:not(.muted) {
-  color: rgba(243, 238, 229, 0.88);
-}
+.help-card p:not(.help-card__title) { color: rgba(243, 238, 229, 0.88); }
+.help-card--placeholder { border-style: solid dashed dashed dashed; }
+.help-card--placeholder .help-card__title { color: var(--muted); }
 
 /* ---------- PRISTUPAČNOST ---------- */
 :focus-visible {
