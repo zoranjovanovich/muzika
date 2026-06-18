@@ -364,6 +364,17 @@ site-nav, site-footer { display: contents; }
 @media (min-width: 640px) {
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
 }
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.sponsor-logos__img { max-height: 56px; width: auto; max-width: 100%; }
+@media (min-width: 640px) {
+  .sponsor-logos { grid-template-columns: repeat(4, 1fr); }
+}
 .funds-columns { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
 .funds-columns__heading { order: -2; }
 .funds-columns__text { order: -1; }
