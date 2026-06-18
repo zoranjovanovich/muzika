@@ -369,37 +369,30 @@ site-nav, site-footer { display: contents; }
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    text-align: right;
   }
-  #funds .wrap.funds-content span.eyebrow,
-  #funds .wrap.funds-content h2,
-  #funds .wrap.funds-content p,
-  #funds .wrap.funds-content .card,
-  #funds .wrap.funds-content .thermo {
+  #funds .wrap.funds-content > span.eyebrow,
+  #funds .wrap.funds-content > h2 {
     width: clamp(200px, 50vw, 590px);
     max-width: 100%;
     box-sizing: border-box;
   }
-  #funds .wrap.funds-content span.eyebrow {
+  #funds .wrap.funds-content > span.eyebrow {
     width: 100%;
     justify-content: flex-end;
     color: var(--paper-ink);
   }
-  #funds .wrap.funds-content h2,
-  #funds .wrap.funds-content p {
+  #funds .wrap.funds-content > h2 {
     display: block;
     text-align: right;
     margin-inline: 0;
   }
-  #funds .wrap.funds-content .card {
-    margin: 0;
-    display: block;
-    text-align: right;
-  }
-  #funds .wrap.funds-content .card p,
-  #funds .wrap.funds-content .card strong,
-  #funds .wrap.funds-content .card .muted {
-    text-align: right;
+  #funds .wrap.funds-content > .funds-columns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    text-align: left;
   }
 }
 /* ---------- POTPISNI ELEMENT: TERMOMETAR DONACIJA ---------- */
