@@ -81,22 +81,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  const revealTargets = document.querySelectorAll('.section h2, .card');
+  const revealTargets = Array.from(document.querySelectorAll('.section h2, .card'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (revealTargets.length && 'IntersectionObserver' in window && !reduceMotion) {
-    const revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0, rootMargin: '0px' });
+  if (revealTargets.length && !reduceMotion) {
+    const revealDistance = 160; // px of scroll over which an element fades in
+    let pending = revealTargets;
+    let ticking = false;
 
-    revealTargets.forEach(function (el) {
-      el.classList.add('js-reveal');
-      revealObserver.observe(el);
-    });
+    function updateReveal() {
+      const vh = window.innerHeight;
+      pending = pending.filter(function (el) {
+        const top = el.getBoundingClientRect().top;
+        const progress = Math.max(0, Math.min(1, (vh - top) / revealDistance));
+        el.style.opacity = String(progress);
+        return progress < 1;
+      });
+      if (!pending.length) {
+        window.removeEventListener('scroll', onScroll);
+      }
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateReveal);
+      }
+    }
+
+    revealTargets.forEach(function (el) { el.classList.add('js-reveal'); });
+    updateReveal();
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 });
 

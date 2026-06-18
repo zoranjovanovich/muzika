@@ -606,15 +606,13 @@ site-nav, site-footer { display: contents; }
 }
 
 /* ---------- SCROLL REVEAL (kartice i naslovi sekcija) ---------- */
-/* Samo opacity, bez transform/translate: .wrap ima overflow-x:hidden, što po
-   CSS spec-u prebacuje overflow-y u auto — transform na detetu bi se računao
-   u scrollable overflow tog .wrap-a i izazvao bočni scrollbar dok je skriveno. */
+/* Opacity se postavlja direktno iz JS-a na osnovu pozicije skrola (ne
+   CSS transition), da bi fade izgledao isto bez obzira na brzinu skrola.
+   Bez transform/translate: .wrap ima overflow-x:hidden, što po CSS spec-u
+   prebacuje overflow-y u auto — transform na detetu bi se računao u
+   scrollable overflow tog .wrap-a i izazvao bočni scrollbar dok je skriveno. */
 .js-reveal {
   opacity: 0;
-  transition: opacity 1.1s var(--ease) 0.2s;
-}
-.js-reveal.is-visible {
-  opacity: 1;
 }
 
 /* ---------- PRISTUPAČNOST ---------- */
