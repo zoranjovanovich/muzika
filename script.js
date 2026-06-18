@@ -80,5 +80,23 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
+
+  const revealTargets = document.querySelectorAll('.section h2, .card');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (revealTargets.length && 'IntersectionObserver' in window && !reduceMotion) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+
+    revealTargets.forEach(function (el) {
+      el.classList.add('js-reveal');
+      revealObserver.observe(el);
+    });
+  }
 });
 

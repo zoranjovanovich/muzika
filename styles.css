@@ -605,6 +605,17 @@ site-nav, site-footer { display: contents; }
   .footer-links { text-align: right; }
 }
 
+/* ---------- SCROLL REVEAL (kartice i naslovi sekcija) ---------- */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---------- PRISTUPAČNOST ---------- */
 :focus-visible {
   outline: 3px solid var(--genre);
