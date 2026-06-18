@@ -364,11 +364,12 @@ site-nav, site-footer { display: contents; }
 @media (min-width: 640px) {
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
 }
+.funds-columns { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
 @media (min-width: 720px) {
   #funds .wrap.funds-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   #funds .wrap.funds-content > span.eyebrow,
   #funds .wrap.funds-content > h2 {
@@ -378,12 +379,12 @@ site-nav, site-footer { display: contents; }
   }
   #funds .wrap.funds-content > span.eyebrow {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: var(--paper-ink);
   }
   #funds .wrap.funds-content > h2 {
     display: block;
-    text-align: right;
+    text-align: left;
     margin-inline: 0;
   }
   #funds .wrap.funds-content > .funds-columns {
