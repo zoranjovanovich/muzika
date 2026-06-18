@@ -365,15 +365,20 @@ site-nav, site-footer { display: contents; }
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .funds-columns { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.funds-columns__heading { order: -2; }
 .funds-columns__text { order: -1; }
 @media (min-width: 720px) {
   #funds .wrap.funds-content > .funds-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-rows: auto auto;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
     align-items: start;
   }
-  .funds-columns__text { order: 0; }
+  .funds-columns__heading { grid-column: 2; grid-row: 1; order: initial; }
+  .funds-columns__data { grid-column: 1; grid-row: 2; }
+  .funds-columns__text { grid-column: 2; grid-row: 2; order: initial; }
 }
 /* ---------- POTPISNI ELEMENT: TERMOMETAR DONACIJA ---------- */
 .thermo { max-width: 520px; }
