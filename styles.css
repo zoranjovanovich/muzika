@@ -377,7 +377,7 @@ site-nav, site-footer { display: contents; }
     align-items: start;
   }
   .funds-columns__heading { grid-column: 2; grid-row: 1; order: initial; }
-  .funds-columns__data { grid-column: 1; grid-row: 2; }
+  .funds-columns__data { grid-column: 1; grid-row: 2; margin-top: 5px; }
   .funds-columns__text { grid-column: 2; grid-row: 2; order: initial; }
 }
 /* ---------- POTPISNI ELEMENT: TERMOMETAR DONACIJA ---------- */
