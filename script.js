@@ -80,38 +80,5 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
-
-  const revealTargets = Array.from(document.querySelectorAll('.section h2, .card'));
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (revealTargets.length && !reduceMotion) {
-    const revealDistance = 160; // px of scroll over which an element fades in
-    let pending = revealTargets;
-    let ticking = false;
-
-    function updateReveal() {
-      const vh = window.innerHeight;
-      pending = pending.filter(function (el) {
-        const top = el.getBoundingClientRect().top;
-        const progress = Math.max(0, Math.min(1, (vh - top) / revealDistance));
-        el.style.opacity = String(progress);
-        return progress < 1;
-      });
-      if (!pending.length) {
-        window.removeEventListener('scroll', onScroll);
-      }
-      ticking = false;
-    }
-
-    function onScroll() {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(updateReveal);
-      }
-    }
-
-    revealTargets.forEach(function (el) { el.classList.add('js-reveal'); });
-    updateReveal();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
 });
 
