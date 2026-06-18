@@ -463,6 +463,7 @@ site-nav, site-footer { display: contents; }
 @media (max-width: 719px) {
   .donate-bar { display: flex; }
   body:has(.donate-bar) { padding-bottom: 108px; }
+  .hero-cta__donate { display: none; }
 }
 
 /* ---------- KARTICA (svirka / instrument / sponzor) ---------- */
